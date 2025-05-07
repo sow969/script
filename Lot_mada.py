@@ -141,13 +141,13 @@ if uploaded_file is not None:
         df.columns = df.columns.str.strip()
         df = df.dropna(axis=1, how='all')
 
-        st.success("✅ Fichier chargé et colonnes vides supprimées avec succès !")
+        st.success("✅ Fichier chargé avec succès!")
         with st.expander("🔎 Aperçu du fichier traité", expanded=False):
             st.dataframe(df, use_container_width=True)
 
         if "Description" in df.columns:
             st.markdown("---")
-            st.subheader("📁 Groupes générés par la colonne 'Description'")
+            st.subheader("📁 Les types de transactions:")
 
             groupes = dict(tuple(df.groupby("Description")))
 
