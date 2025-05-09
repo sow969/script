@@ -467,6 +467,7 @@ if uploaded_file is not None:
             st.markdown("---")
             st.subheader("📊 Fichier final apres traitement:")
             st.dataframe(df_final, use_container_width=True)
+            st.write("Nombres de lignes:", len(df_final))
 
             # Total général
             total_general = df["Montant"].sum(skipna=True)
