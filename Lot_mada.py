@@ -436,9 +436,11 @@ if uploaded_file is not None:
 
             for description, group_df in groupes:
                 somme_solde = group_df["Montant"].sum(skipna=True)
+                lignes = len(group_df)
 
                 with st.expander(f"📌 `{description}`", expanded=False):
                     st.markdown(f"**💰 Somme : `{somme_solde:,.2f}` MGA**")
+                    st.markdown("Nombres de lignes:", lignes)
                     st.dataframe(group_df, use_container_width=True)
 
                     buffer = io.StringIO()
