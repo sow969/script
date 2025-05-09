@@ -440,7 +440,7 @@ if uploaded_file is not None:
 
                 with st.expander(f"📌 `{description}`", expanded=False):
                     st.markdown(f"**💰 Somme : `{somme_solde:,.2f}` MGA**")
-                    st.markdown("Nombres de lignes:", lignes)
+                    st.write("Nombres de lignes:", lignes)
                     st.dataframe(group_df, use_container_width=True)
 
                     buffer = io.StringIO()
