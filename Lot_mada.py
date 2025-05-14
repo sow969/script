@@ -371,13 +371,10 @@
 #     st.info("🕐 En attente du téléversement d'un fichier CSV.")
 
 import streamlit as st
-
-# Configuration de la page
-st.set_page_config(page_title="🔍 LOT MADA", layout="wide")
 import pandas as pd
 import io
 
-
+st.set_page_config(page_title="🔍 LOT MADA", layout="wide")
 st.markdown(
     "<h1 style='text-align: center; color: #4B8BBE;'>🔍 Traitement de Fichiers - Lot MADA</h1>", 
     unsafe_allow_html=True
